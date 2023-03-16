@@ -1,20 +1,22 @@
-{% extends 'base.html.twig' %}
+{% extends 'base.html.twig' %} {% block title %}CalculatriceController!{%
+endblock %} {% block body %}
+<h1>Calculatrice</h1>
+<form method="POST">
+  <lable for="x">Premier nombre</lable>
+  <input type="number" name="x" id="x" />
 
-{% block title %}Hello CalculatriceController!{% endblock %}
+  <lable for="y">Secong nombre</lable>
+  <input type="number" name="y" id="y" />
 
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+  <lable for="operation">Operation</lable>
+  <select name="operation" id="operation">
+    <option value="addition">+</option>
+    <option value="soustraction">-</option>
+    <option value="multiplication">*</option>
+    <option value="division">/</option>
+  </select>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+  <button type="submit">Calculer</button>
+</form>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/GU/Desktop/LEA/Doranco/03-13 Symfony Framework PHP/calc/src/Controller/CalculatriceController.php'|file_link(0) }}">src/Controller/CalculatriceController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/GU/Desktop/LEA/Doranco/03-13 Symfony Framework PHP/calc/templates/calculatrice/index.html.twig'|file_link(0) }}">templates/calculatrice/index.html.twig</a></code></li>
-    </ul>
-</div>
-{% endblock %}
+ {% endblock %}
